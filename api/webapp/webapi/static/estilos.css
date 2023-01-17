@@ -1,18 +1,31 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+html{
+    height: 100%;
+    /*background-color: blue;*/
+    }
 body{
-    margin: 0;
-}
-#toggle-menu{
-    margin: 10px;
-}
-.nav{
-    position: fixed;
-    width: 225px;
-    height: 100vh;
-    background-color: azure;
+    min-height: 100vh;
+    /*background-color: coral;*/
 }
 
-.main{
-    margin-left: 225;
-    min-height: 100vh;
-    background-color: #333;
+#toggle-menu{
+    padding: 5px;
+}
+
+.nav{
+    position: left;
+    padding: 15px;
+    max-height: 90%;
+    width: 225px;
+    height: 100vh;
+    background-color: rgb(104, 143, 226);
+}
+a:link, a:visited, a:active {
+    text-decoration:none;
+}
+li {
+    list-style: none;
 }
