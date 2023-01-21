@@ -14,7 +14,6 @@ body{
 #toggle-menu{
     padding: 5px;
 }
-
 .nav{
     position: left;
     padding: 15px;
@@ -23,9 +22,13 @@ body{
     height: 100vh;
     background-color: rgb(104, 143, 226);
 }
+
+/*Quitar el subrayado el los link o enlaces */
 a:link, a:visited, a:active {
     text-decoration:none;
 }
+
+/*Quitar el punto negro el las listas */
 li {
     list-style: none;
 }
