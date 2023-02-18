@@ -15,5 +15,5 @@ def listsite(request):
 def deletesite(request):
     return render (request,'deletesite.html')
 
-def createsite(request):
+def nuevo(request):
     return render (request,'createsite.html')

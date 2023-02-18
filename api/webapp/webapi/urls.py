@@ -6,6 +6,6 @@ urlpatterns = [
     path('selectsite', views.selectsite, name='selectsite'),
     path('listsite', views.listsite, name='listsite'),
     path('deletesite', views.deletesite, name='deletesite'),
-    path('crear', views.createsite, name='crear'),
+    path('nuevo', views.nuevo, name='nuevo'),
 ]
 
