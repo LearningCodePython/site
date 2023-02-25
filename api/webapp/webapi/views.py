@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from .models import sitios
 
 # Create your views here.
 
@@ -10,7 +11,8 @@ def selectsite(request):
     return render (request, 'selectsite.html')
 
 def listsite(request):
-    return render (request, 'listsite.html')
+    datos = sitios.objects.all
+    return render (request, 'listsite.html', {'sitios': datos})
 
 def deletesite(request):
     return render (request,'deletesite.html')

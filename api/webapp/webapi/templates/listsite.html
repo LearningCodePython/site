@@ -6,43 +6,69 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     {% load static %}
     <link rel="stylesheet" type="text/css" href="{% static 'estilos.css' %}">
-    <title>Listar Sites</title>
+    <title>Lista de Sitios</title>
 </head>
 <body>
-    <nav class="nav">
-        <div class="toggle-menu" id="toggle-menu">
-                <i class="fas fa-bars toggle-menu_icon"></i>
-        </div>
+    <div class="toggle-menu" id="toggle-menu">
+        <i class="fas fa-bars toggle-menu_icon"></i>
+    </div>
+    <nav class="menu">
         <ul id="main-menu" class="main-menu">
-                <li class="main-menu-item">
-                    <a href="#" class="main-menu_link">
-                        <i class="fa-solid fa-circle-check"></i>
-                    Seleccionar Site
-                    </a>
-                </li>
-                <li class="main-menu-item">
-                    <a href="#" class="main-menu_link">
-                        <i class="fa-solid fa-table-list"></i>
-                    Lista de Sites
-                    </a>
-                </li>
-                <li class="main-menu-item">
-                    <a href="#" class="main-menu_link">
-                        <i class="fa-solid fa-plus"></i>
-                    Crear Nuevo Site
-                    </a>
-                </li>
-                <li class="main-menu-item">
-                    <a href="#" class="main-menu_link">
-                        <i class="fa-solid fa-trash"></i>
-                    Borrar Site
-                    </a>
-                </li>   
+            <li class="main-menu-item">
+                <a href="selectsite" class="main-menu_link">
+                    <i class="fa-solid fa-circle-check"></i>
+                Seleccionar Site
+                </a>
+            </li>
+            <li class="main-menu-item">
+                <a href="listsite" class="main-menu_link">
+                    <i class="fa-solid fa-table-list"></i>
+                Lista de Sites
+                </a>
+            </li>
+            <li class="main-menu-item">
+                <a href="nuevo" class="main-menu_link">
+                    <i class="fa-solid fa-plus"></i>
+                Crear Nuevo Site
+                </a>
+            </li>
+            <li class="main-menu-item">
+                <a href="deletesite" class="main-menu_link">
+                    <i class="fa-solid fa-trash"></i>
+                Borrar Site
+                </a>
+            </li>   
         </ul>
     </nav>
+    <div class="table_sites">
+        <table>
+            <caption>
+                <h1>Listado de Sitios</h1>
+            </caption
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Host</th>
+                    <th>Nombre</th>
+                    <th>User</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for item in sitios %}
+                    <tr>
+                        <td class="indice">{{item.id}}</td>
+                        <td>{{item.nombre}}</td>
+                        <td>{{item.host}}</td>
+                        <td>{{item.api_user}}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>    
+    </div>
     <main class="main"></main>
     <script src="js/scripts.js"></script>
     <script src="https://kit.fontawesome.com/379ff6497f.js" crossorigin="anonymous"></script>
-    </https:>
+
+    
 </body>
 </html>
