@@ -3,13 +3,14 @@ from django.db import models
 # Create your models here.
 
 class sitios(models.Model):
-    nombre = models.CharField(max_length=50, null=True)
-    host = models.CharField(max_length=50, null=False)
-    api_password = models.CharField(max_length=50, null=False)
-    api_user = models.CharField(max_length=50, null=False)
+    id = models.AutoField(primary_key=True)
+    nombre = models.CharField(max_length=50, verbose_name='nombre',null=True)
+    host = models.CharField(max_length=50, verbose_name='host', null=False)
+    api_password = models.CharField(max_length=50, verbose_name="api_password", null=False)
+    api_user = models.CharField(max_length=50, verbose_name='api_user', null=False)
 
     def __str__(self):
-    	fila = self.nombre
+    	fila = "Nombre: " + self.nombre
     	return fila
 
 class vpn_data(models.Model):

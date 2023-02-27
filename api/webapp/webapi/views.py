@@ -1,6 +1,7 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from .models import sitios
+from .forms import sitios_form
 
 # Create your views here.
 
@@ -14,8 +15,15 @@ def listsite(request):
     datos = sitios.objects.all
     return render (request, 'listsite.html', {'sitios': datos})
 
-def deletesite(request):
-    return render (request,'deletesite.html')
+def delete(request, id):
+    sitio = sitios.objects.get(id=id)
+    sitio.delete()
+    return redirect('listsite')
 
 def nuevo(request):
-    return render (request,'createsite.html')
+    formulario = sitios_form(request.POST or None)
+    if formulario.is_valid():
+        formulario.save()
+        return redirect('listsite')
+    return render(request, 'createsite.html', {'formulario': formulario})
+    

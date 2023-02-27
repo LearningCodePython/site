@@ -9,10 +9,13 @@
     <title>Lista de Sitios</title>
 </head>
 <body>
-    <div class="toggle-menu" id="toggle-menu">
+    <div class="barra_superior">
+        <h2 class="cabecera"> Listados de Sitios en la base de datos </h2>
+    </div>
+    <div id="toggle-menu">
         <i class="fas fa-bars toggle-menu_icon"></i>
     </div>
-    <nav class="menu">
+    <nav class="menu" id="sidebar">
         <ul id="main-menu" class="main-menu">
             <li class="main-menu-item">
                 <a href="selectsite" class="main-menu_link">
@@ -44,10 +47,10 @@
         <table>
             <caption>
                 <h1>Listado de Sitios</h1>
-            </caption
+            </caption>
             <thead>
                 <tr>
-                    <th>ID</th>
+                    <!-- <th>ID</th> -->
                     <th>Host</th>
                     <th>Nombre</th>
                     <th>User</th>
@@ -56,19 +59,30 @@
             <tbody>
                 {% for item in sitios %}
                     <tr>
-                        <td class="indice">{{item.id}}</td>
+                        <!-- <td class="indice">{{item.id}}</td> -->
                         <td>{{item.nombre}}</td>
                         <td>{{item.host}}</td>
                         <td>{{item.api_user}}</td>
+                        <td class="td_button">
+                            <a name="" id="" class="btn-del" href="delete/{{ item.id }}" role="button">Borrar</a>
+                            |
+                            <a name="" id="" class="btn-select" href="#" role="button">Select</a>
+                            |    
+                            <a name="" id="" class="btn-info" href="#" role="button">Edit</a>    
+                        </td>
+                    </tr>
                     </tr>
                 {% endfor %}
             </tbody>
         </table>    
     </div>
     <main class="main"></main>
-    <script src="js/scripts.js"></script>
-    <script src="https://kit.fontawesome.com/379ff6497f.js" crossorigin="anonymous"></script>
-
-    
+    <script src="static/scripts.js"></script>
+    <script src="https://kit.fontawesome.com/379ff6497f.js" crossorigin="anonymous"></script>   
 </body>
+<footers>
+    <div class="piedepagina">
+        <p> declaracion de privacidad y contacto </p>
+    </div>
+</footers>
 </html>

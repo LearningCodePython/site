@@ -6,9 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     {% load static %}
     <link rel="stylesheet" type="text/css" href="{% static 'estilos.css' %}">
-    <title>Crear Sites</title>
+    <title>Crear Sites</title>    
 </head>
 <body>
+    <div class="barra_superior">
+        <h2 class="cabecera"> Crear Nuevo Sitio </h2>
+    </div>
     <div class="toggle-menu" id="toggle-menu">
         <i class="fas fa-bars toggle-menu_icon"></i>
     </div>
@@ -40,8 +43,11 @@
             </li>   
         </ul>
     </nav>
+    <div clas="create_form">
+        {% include 'forms.html' %}
+    </div>
     <main class="main"></main>
-    <script src="js/scripts.js"></script>
+    <script src="static/scripts.js"></script>
     <script src="https://kit.fontawesome.com/379ff6497f.js" crossorigin="anonymous"></script>
     </https:>
 </body>
