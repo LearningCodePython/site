@@ -8,6 +8,7 @@ urlpatterns = [
     path('listsite', views.listsite, name='listsite'),
     path('delete/<int:id>', views.delete, name='delete'),
     path('nuevo', views.nuevo, name='nuevo'),
+    path('selectsite/<int:id>', views.selectsite, name='selectsite'),
 
 ]
 

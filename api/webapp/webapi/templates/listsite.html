@@ -51,8 +51,8 @@
             <thead>
                 <tr>
                     <!-- <th>ID</th> -->
-                    <th>Host</th>
                     <th>Nombre</th>
+                    <th>Host</th>                    
                     <th>User</th>
                 </tr>
             </thead>
@@ -60,13 +60,13 @@
                 {% for item in sitios %}
                     <tr>
                         <!-- <td class="indice">{{item.id}}</td> -->
-                        <td>{{item.nombre}}</td>
-                        <td>{{item.host}}</td>
+                        <td>{{item.nombre}}</td>  
+                        <td>{{item.host}}</td>                                              
                         <td>{{item.api_user}}</td>
                         <td class="td_button">
                             <a name="" id="" class="btn-del" href="delete/{{ item.id }}" role="button">Borrar</a>
                             |
-                            <a name="" id="" class="btn-select" href="#" role="button">Select</a>
+                            <a name="" id="" class="btn-select" href="selectsite/{{ item.id }}" role="button">Select</a>
                             |    
                             <a name="" id="" class="btn-info" href="#" role="button">Edit</a>    
                         </td>

@@ -1,5 +1,4 @@
 <form enctype="multipart/form-data" method="post">
-<!-- <form method="POST" action="{% url 'nuevo' %}"> -->
 	{% csrf_token %}
 	<h4> Datos de nuevo sitio </h4
 	{% for item in formulario %}
@@ -13,21 +12,3 @@
 	{% endfor %}
 	<button type="submit" class="btn btn-primary">Enviar</button>
 </form>
-
-<!--
-<form method="POST" action="{% url 'nuevo' %}">
-	<div class="mb-3">
-		<input type="text" class="form-control" placeholder="Nombre del sitio" name="nombre">
-	</div>
-	<div class="mb-3">
-		<input type="text" class="form-control" placeholder="Dirección IP" name="host">
-	</div>
-	<div class="mb-3">
-		<input type="text" class="form-control" placeholder="Api Passwrod" name="api_password">
-	</div>
-	<div class="mb-3">
-		<input type="text" class="form-control" placeholder="Api USer" name="api_user">
-	</div>
-	<button type="submit" class="btn btn-primary">Submit</button>
-	</form>
--->

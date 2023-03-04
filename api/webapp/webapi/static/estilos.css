@@ -80,7 +80,7 @@ table{
     background-color: bisque;
     position: absolute;
     top: 15%;
-    left: 20%;
+    left: 25%;
     opacity: 0.6;
     /*width: 950px;*/
     /*height: 90%;*/
@@ -88,7 +88,7 @@ table{
 
 .table_sites th {
     border: solid 2px;
-    width: 300px;
+    width: 200px;
     align-content: center;
 }
 
