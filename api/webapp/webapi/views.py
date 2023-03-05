@@ -8,8 +8,10 @@ from .forms import sitios_form
 def sites(request):
     return render (request, 'sites.html')
 
-def selectsite(request):
-    return render (request, 'selectsite.html')
+def selectsite(request, id):
+    sitio = sitios.objects.get(id=id)
+    formulario = sitios_form(request.POST or None, instance=sitio)
+    return render (request, 'selectsite.html',{'formulario': formulario})
 
 def listsite(request):
     datos = sitios.objects.all
