@@ -1,15 +1,16 @@
 <form enctype="multipart/form-data" method="post">
 	{% csrf_token %}
-	<h4> Datos de nuevo sitio </h4
-	{% for item in formulario %}
-		<div>
-			<label for="" class="formulario"> {{item.label}}: </label>		
+	<div class="div_form">
+		{% for item in formulario %}		
+			<label form="" class="formulario"> {{item.label}}: </label>		
 			<input 
 			type="{{ item.field.widget.input_type }}" 
 			name="{{ item.name }}"
 			placeholder="{{item.label}}"
 			value="{{ item.value | default:'' }}">	
-		</div>
-	{% endfor %}
+		{% endfor %}
+	</div>	
 	<button type="submit" class="btn btn-primary">Enviar</button>
 </form>
+</div>
+</body>
