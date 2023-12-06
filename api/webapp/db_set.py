@@ -28,14 +28,15 @@ def setting_db():
 
 	if cuestion1 == "y":
 		dbname=input("Nombre de la base de Datos: ")
-		createdb(dbname)
+		create_db(dbname)
 		print (f"Ha sido creada la base de datos {dbname} ")
 	if cuestion2 == "y":
 		dropname=input("Nombre de la base de Datos que quiere borrar. ")
-		dropdb(dropname)
+		drop_db(dropname)
 		print (f"Ha sido eliminada la base de datos {dropname}")
 	if cuestion2 == "n" or cuestion1 == "n":
 		print ("Adios")
 	if cuestion1 == "n" and cuestion2 == "n":
 		print ("Entonces no puedo hacer nada por ti. ")
 	mycommit()
+create_db("API")
