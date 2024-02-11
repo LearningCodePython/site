@@ -5,7 +5,7 @@
 
 body{
     /* Ubicación de la imagen */
-    background-image: url("images/197244260_l.webp");
+    background-image: url("images/fondo_metal.jpg");
     /* Para dejar la imagen de fondo centrada, vertical y horizontalmente */
     background-position: center center;
     /* Para que la imagen de fondo no se repita */
@@ -20,6 +20,7 @@ body{
 }
 
 .barra_superior{
+    opacity: 0;
     color: rgb(255, 255, 255);
     align-items: center;
     display: flex;
@@ -31,6 +32,7 @@ body{
 }
 
 .piedepagina{
+    opacity: 0;
     color: rgb(255, 255, 255);
     align-items: center;
     display: flex;
@@ -43,16 +45,18 @@ body{
 
 /* Imagen superior derecha del menú de selección */
 #toggle-menu{
+    opacity: 0.5;
     color: rgb(255, 255, 255);
     position: relative;
     width: 150px;
-    padding: 5px;
+    padding: 40px;
     background-color:rgb(13, 68, 85);
 }
 
 /* Propiedades del menú lateral */
 .menu{
-    color: rgb(255, 255, 255);
+    opacity: 0.5;
+    color: rgb(160, 9, 9)
     margin-top: 0px;
     float: left;
     padding: 40px;
@@ -68,7 +72,7 @@ body{
 /*Quitar el subrayado el los link o enlaces */
 a:link, a:visited, a:active {
     text-decoration:none;
-    color: azure;
+    color: rgb(247, 134, 77);
 }
 /* Unir todas las lineas de todas las tablas <table> existentes */
 table{

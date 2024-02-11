@@ -1,2 +1,4 @@
-api/webapp/webapi/__pycache__/
+api/webapp/webapi/__pycache__/*
 api/webapp/migrations/*
+api/webapp/__pycache__/*
+api/webap/db/*

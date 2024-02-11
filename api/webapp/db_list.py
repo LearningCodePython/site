@@ -15,15 +15,8 @@ def getdblist():
     for (database) in cursor:
         print(database[0])
 
-################################################################################333
-# Función que devuelve el listado de los elemntos almacenados en una tabla:
-
-def getAllRows():
-    cursor.execute("SELECT * FROM site")
-    myresult = cursor.fetchall()
-    for x in myresult:
-        print(x)
-
 # Llamada a la finción:   
-getAllRows()
-        
+# getAllRows()
+getdblist()        
+tablelist()
+

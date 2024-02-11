@@ -1,3 +1,10 @@
+# Debemos crear la la structura de la base de datos primero.
+* Ejecutaremos el siguieten comando que creara una base de datos (elegiremos "API") y dentro de esta base de datos creara una tabla llamada "site"
+
+```bash
+(api) emilio@cremheda:~/Codigo/site/api/webapp$ python inicio.py
+```
+
 [[Python Code#^7c0e24]]
 ```python
 import mysql.connector

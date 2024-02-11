@@ -42,6 +42,7 @@ $ python3.6 -m venv mi_entorno
 6. Activar un entorno virtual de este ejemplo el entorno virtual usado es #mi_entorno  ^a797d3
 ```bash
 $ source mi_entorno/bin/activate mi_entorno.
+ejemplo:	emilio@cremheda:~/Codigo/site$ source api/bin/activate api
 ```
 7. Al finalizar el trabajo podemos desactivar el entrono con el comando *deactivate*
 ```bash
